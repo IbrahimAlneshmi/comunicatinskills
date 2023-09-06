@@ -1,0 +1,102 @@
+/* styles.css */
+
+
+/* ضبط التباعد بين عناصر البحث والأزرار */
+#paste-button {
+	position: fixed;
+    left: 710px; /* تحتاج إلى ضبط هذا حسب الحاجة */
+}
+
+/* ضبط التباعد بين الأزرار */
+#prev-button {
+	position: fixed;
+    left: 810px; /* تحتاج إلى ضبط هذا حسب الحاجة */
+}
+
+#next-button {
+	position: fixed;
+    left: 910px; /* تحتاج إلى ضبط هذا حسب الحاجة */
+}
+#result-count {
+	position: fixed;
+    left: 300px;
+	background-color: Red;
+}
+/* يمكنك أيضًا تخصيص مظهر العناصر مثل الألوان والخطوط وحجم الخط وما إلى ذلك هنا */
+
+.search-box {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+.body {
+	    width: 100%;
+}
+.search-tab {
+	
+    text-align: center;
+    margin-top: 20px;
+}
+.question{
+	width: 50%;
+    margin: 20px auto;
+    text-align: center;
+	direction:rtl;
+}
+
+#search-input {
+	position: fixed;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+#search-results {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#search-results li {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#search-results li:hover {
+    background-color: #ddd;
+}
+
+/* styles.css */
+.highlight {
+    background-color: yellow; /* يمكنك تغيير لون الخلفية كما تريد */
+    font-weight: bold; /* يمكنك تغيير نمط النص كما تريد */
+}
+/* CSS (styles.css) */
+mark {
+    background-color: yellow; /* يمكنك تغيير لون الخلفية كما تريد */
+    font-weight: bold; /* يمكنك تغيير نمط النص كما تريد */
+}
+/* في ملف styles.css */
+
+
+.answer {
+	    background-color: #007BFF;
+display: inline-block;
+}
+#menu01-3{
+	position: fixed;
+	
+}
+.view {
+	width: 100%;
+position:center;
+	direction:rtl;
+	padding: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+	   	   
+}
+	
