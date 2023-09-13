@@ -8,6 +8,10 @@ const nextButton = document.getElementById('extractButton');
 let currentSearchTerm = '';
 let currentResultIndex = -1;
 const highlightedMatches = [];
+searchInput.addEventListener('click', function () {
+    // قم بتفريغ قيمة مربع البحث عند النقر داخله
+    searchInput.value = '';
+});
 
 prevButton.addEventListener('click', scrollToPrevResult);
 nextButton.addEventListener('click', scrollToNextResult);
