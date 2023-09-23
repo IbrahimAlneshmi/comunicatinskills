@@ -91,7 +91,8 @@ searchTerm = searchTerm.replace(/[.]/g, '');
     searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
     searchTerm = searchTerm.replace(/[,]/g, ' ');
     searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
-    searchTerm = searchTerm.replace(/[ة]/g, 'ه');
+    searchTerm = searchTerm.replace(/[ةه]/g, '[هة]');
+
 
     if (!searchTerm) {
         highlightedMatches.forEach(match => {
