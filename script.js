@@ -11,6 +11,7 @@ const highlightedMatches = [];
 searchInput.addEventListener('click', function () {
     // قم بتفريغ قيمة مربع البحث عند النقر داخله
     searchInput.value = '';
+	
 });
 
 prevButton.addEventListener('click', scrollToPrevResult);
@@ -43,6 +44,8 @@ pasteButton.addEventListener('click', pasteFromClipboard);
 searchInput.addEventListener('input', highlightMatches);
 document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && event.key === 'v') {
+		event.preventDefault();
+
 	    searchInput.value = '';
         pasteFromClipboard();
     }
