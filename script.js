@@ -43,6 +43,7 @@ pasteButton.addEventListener('click', pasteFromClipboard);
 searchInput.addEventListener('input', highlightMatches);
 document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && event.key === 'v') {
+	    searchInput.value = '';
         pasteFromClipboard();
     }
 });
@@ -54,6 +55,7 @@ searchInput.addEventListener('input', highlightMatches);
 
 document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && event.key === 'v') {
+	    searchInput.value = '';
         pasteFromClipboard();
     }
 });
