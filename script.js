@@ -95,6 +95,7 @@ searchTerm = searchTerm.replace(/[.]/g, '');
     searchTerm = searchTerm.replace(/[,]/g, ' ');
     searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
     searchTerm = searchTerm.replace(/[ةه]/g, '[هة]');
+	searchTerm = searchTerm.replace(/[آا]/g, '[اآ]');
 
 
     if (!searchTerm) {
