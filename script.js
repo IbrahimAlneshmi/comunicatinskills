@@ -49,7 +49,7 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-
+/*
 pasteButton.addEventListener('click', pasteFromClipboard);
 
 searchInput.addEventListener('input', highlightMatches);
@@ -60,6 +60,7 @@ document.addEventListener('keydown', function (event) {
         pasteFromClipboard();
     }
 });
+*/
 
 // تعطيل اختصارات لوحة المفاتيح للنسخ
 contentElements.forEach(element => {
@@ -73,7 +74,7 @@ document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && (event.key === 'c' || event.key === 'C')) {
         // إلغاء عملية النسخ
         event.preventDefault();
-        // يمكنك هنا عرض رسالة تنبيه إذا رغبت
+	    alert('نسخ النص غير مسموح به.');        // يمكنك هنا عرض رسالة تنبيه إذا رغبت
     }
 });
 
