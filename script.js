@@ -11,6 +11,7 @@ const highlightedMatches = [];
 searchInput.addEventListener('click', function () {
     // قم بتفريغ قيمة مربع البحث عند النقر داخله
     searchInput.value = '';
+	pasteFromClipboard();
 });
 
 prevButton.addEventListener('click', scrollToPrevResult);
