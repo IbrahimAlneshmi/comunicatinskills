@@ -91,7 +91,8 @@ function pasteFromClipboard() {
 function highlightMatches() {
     let searchTerm = searchInput.value.trim().toLowerCase();
 	
-	searchTerm = searchTerm.replace(/[أإ]/g, 'ا');
+	searchTerm = searchTerm.replace(/[اأ]/g, '[أا]');
+	searchTerm = searchTerm.replace(/[إا]/g, '[اإ]');
 searchTerm = searchTerm.replace(/[.]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
