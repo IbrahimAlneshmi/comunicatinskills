@@ -93,6 +93,7 @@ function highlightMatches() {
 	
 	searchTerm = searchTerm.replace(/[أإ]/g, 'ا');
 searchTerm = searchTerm.replace(/[.]/g, '');
+searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
     searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
     searchTerm = searchTerm.replace(/[,]/g, ' ');
