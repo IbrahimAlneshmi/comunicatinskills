@@ -91,18 +91,20 @@ function pasteFromClipboard() {
 function highlightMatches() {
     let searchTerm = searchInput.value.trim().toLowerCase();
 	
-	searchTerm = searchTerm.replace(/[أ]/g, 'ا');
-	searchTerm = searchTerm.replace(/[إ]/g, 'ا');
+	//searchTerm = searchTerm.replace(/[أ]/g, 'ا');
+	//searchTerm = searchTerm.replace(/[إ]/g, 'ا');
+	    searchTerm = searchTerm.replace(/[أإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
+
 searchTerm = searchTerm.replace(/[.]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
-    searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
+    
     searchTerm = searchTerm.replace(/[,]/g, ' ');
     searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
     searchTerm = searchTerm.replace(/[ةه]/g, '[هة]');
-	searchTerm = searchTerm.replace(/[آا]/g, '[اآ]');
+	//searchTerm = searchTerm.replace(/[آا]/g, '[اآ]');
 	searchTerm = searchTerm.replace(/[ىي]/g, '[يى]');
-
+	searchTerm = searchTerm.replace(/\s{2,}/g, ' ');
 
     if (!searchTerm) {
         highlightedMatches.forEach(match => {
