@@ -95,7 +95,7 @@ function highlightMatches() {
 	//searchTerm = searchTerm.replace(/[إ]/g, 'ا');
 	    searchTerm = searchTerm.replace(/[اأإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
-
+searchTerm = searchTerm.replace(/["]/g, ' ');
 searchTerm = searchTerm.replace(/[.]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
