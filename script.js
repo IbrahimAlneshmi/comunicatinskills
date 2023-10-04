@@ -94,6 +94,7 @@ function highlightMatches() {
 	//searchTerm = searchTerm.replace(/[أ]/g, 'ا');
 	//searchTerm = searchTerm.replace(/[إ]/g, 'ا');
 	    searchTerm = searchTerm.replace(/[اأإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
+		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
 
 searchTerm = searchTerm.replace(/[.]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
