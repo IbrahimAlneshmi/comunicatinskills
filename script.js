@@ -15,6 +15,13 @@ searchInput.addEventListener('click', function () {
 });
 
 nextButton.addEventListener('click', scrollToNextResult);
+function updateResultCount() {
+    if (highlightedMatches.length > 0) {
+        resultCount.textContent = `${currentResultIndex + 1} من ${highlightedMatches.length} نتيجة`;
+    } else {
+        resultCount.textContent = '0 نتيجة';
+    }
+}
 
 
 
@@ -31,7 +38,9 @@ function scrollToNextResult() {
     }
 
     scrollToCurrentResult();
+    updateResultCount(); // اتصال الدالة لتحديث العرض
 }
+
 
 
 function scrollToCurrentResult() {
