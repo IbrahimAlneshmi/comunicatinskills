@@ -113,7 +113,7 @@ function pasteFromClipboard() {
 function highlightMatches() {
     let searchTerm = searchInput.value.trim().toLowerCase();
 	
-	//searchTerm = searchTerm.replace(/[أ]/g, 'ا');
+	searchTerm = searchTerm.replace(/["]/g, ' ');
 	//searchTerm = searchTerm.replace(/[إ]/g, 'ا');
 	    searchTerm = searchTerm.replace(/[اأإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
