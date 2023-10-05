@@ -1,8 +1,7 @@
 const searchInput = document.getElementById('search-input');
 const pasteButton = document.getElementById('openBackCameraButton');
 const contentElements = document.querySelectorAll('.wordToCopy');
-const resultCount = document.getElementById('result-count');
-const prevButton = document.getElementById('copyButton');
+const resultCount = document.getElementById('copyButton');
 const nextButton = document.getElementById('extractButton');
 
 let currentSearchTerm = '';
