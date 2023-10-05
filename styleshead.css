@@ -58,7 +58,13 @@
     border-radius: 5px; /* حواف مستديرة */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
     }
-    
+    .nav-link {
+        position: fixed;
+        top: 50px;
+        left: 20%;
+		background-color: gray;
+	color: white;
+    }
 }
 #result-count{
 	
@@ -73,7 +79,10 @@
     .styled-button,
     .styled-button1,
     .styled-button2,
-    
+    .nav-link {
+        position: relative; /* جعل العناصر غير ثابتة على الهواتف */
+        top: auto;
+    }
     
     #search-input {
         left: 0; /* لجعلها تبدأ من اليسار */
@@ -123,7 +132,13 @@
     border-radius: 5px; /* حواف مستديرة */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
     }
-    
+    .nav-link {
+        left: 0; /* لجعلها تبدأ من اليسار */
+		background-color: gray;
+	color: white;
+	
+        margin-top: 0px;
+    }
     
 	.styled-button2:hover {
     background-color: #45a049; /* لون الخلفية عند التمرير فوقه */
@@ -146,3 +161,4 @@
 .centered-container {
 position: fixed;
 }
+
