@@ -14,30 +14,44 @@ searchInput.addEventListener('click', function () {
 	
 });
 
-prevButton.addEventListener('click', scrollToPrevResult);
 nextButton.addEventListener('click', scrollToNextResult);
 
-function scrollToPrevResult() {
-    if (currentResultIndex > 0) {
-        currentResultIndex--;
-        scrollToCurrentResult();
-    }
-}
+
+
 
 function scrollToNextResult() {
-    if (currentResultIndex < highlightedMatches.length - 1) {
-        currentResultIndex++;
-        scrollToCurrentResult();
+    if (highlightedMatches.length === 0) {
+        return;
     }
+
+    currentResultIndex++;
+    if (currentResultIndex >= highlightedMatches.length) {
+        // إذا وصلت إلى النهاية، عُد إلى البداية
+        currentResultIndex = 0;
+    }
+
+    scrollToCurrentResult();
 }
+
 
 function scrollToCurrentResult() {
     const currentMatch = highlightedMatches[currentResultIndex];
 
     if (currentMatch) {
         currentMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (highlightedMatches.length === 1) {
+        // إذا كان هناك نتيجة واحدة فقط ولم يتم تحديدها، انتقل إلى النتيجة بواسطة العنصر id
+        const singleResult = highlightedMatches[0];
+        if (singleResult.id) {
+            const element = document.getElementById(singleResult.id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
     }
 }
+
+
 
 pasteButton.addEventListener('click', pasteFromClipboard);
 
@@ -95,7 +109,7 @@ function highlightMatches() {
 	//searchTerm = searchTerm.replace(/[إ]/g, 'ا');
 	    searchTerm = searchTerm.replace(/[اأإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
-searchTerm = searchTerm.replace(/["]/g, ' ');
+
 searchTerm = searchTerm.replace(/[.]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
