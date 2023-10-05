@@ -1,0 +1,148 @@
+
+/* للأجهزة الكبيرة والشاشات الكبيرة */
+@media screen and (min-width: 768px) {
+    #search-input {
+        position: fixed;
+        top: 0;
+        left: 1%;
+    }
+    #extractButton {
+        position: fixed;
+        top: 50px;
+        left: 0%;
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button {
+        position: fixed;
+        top: 50px;
+        left: 5%;
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button1 {
+        position: fixed;
+        top: 50px;
+        left: 5%;
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button2 {
+        position: fixed;
+        top: 50px;
+        left: 15%;
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    
+}
+#result-count{
+	
+	position: fixed; /* جعل العناصر غير ثابتة على الهواتف */
+        top: auto;
+	}
+
+/* للأجهزة الصغيرة والهواتف المحمولة */
+@media screen and (max-width: 767px) {
+    #search-input,
+    #extractButton,
+    .styled-button,
+    .styled-button1,
+    .styled-button2,
+    
+    
+    #search-input {
+        left: 0; /* لجعلها تبدأ من اليسار */
+        transform: none; /* إلغاء أي تحويل مسبق */
+    }
+    #extractButton {
+        left: 0; /* لجعلها تبدأ من اليسار */
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button {
+        left: 0; /* لجعلها تبدأ من اليسار */
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button1 {
+        left: 0; /* لجعلها تبدأ من اليسار */
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    .styled-button2 {
+        left: 0; /* لجعلها تبدأ من اليسار */
+		background-color: #4CAF50; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 10px 20px; /* حجم الهوامش الداخلية */
+    font-size: 16px; /* حجم الخط */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+    border-radius: 5px; /* حواف مستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    }
+    
+    
+	.styled-button2:hover {
+    background-color: #45a049; /* لون الخلفية عند التمرير فوقه */
+}
+#result-count{
+	left: 0;
+	position: relative; /* جعل العناصر غير ثابتة على الهواتف */
+        top: auto;
+	}
+    
+    /* إضافة تباعد بين العناصر لمنع التداخل */
+    #search-input,
+    #extractButton,
+    .styled-button,
+    .styled-button1,
+    .styled-button2,
+    
+	
+}
+.centered-container {
+position: fixed;
+}
