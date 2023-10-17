@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بحث عن معلومات باستخدام API</title>
+</head>
+<body>
+    <h1>بحث باستخدام API</h1>
+    <input type="text" id="searchInput" placeholder="أدخل مصطلح البحث">
+    <button id="searchButton">بحث</button>
+    <div id="results"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const apiKey = '748fa87f-96f0-4314-9fe3-9436fd1d0fd0'; // استبدل بمفتاح الوصول الخاص بك
+            const apiUrl = 'https://www.zerogpt.com/'; // استبدل برابط الAPI الفعلي
+            const searchTerm = document.getElementById('searchInput').value;
+
+            axios.get(apiUrl, {
+                params: {
+                    query: searchTerm,
+                    apiKey: apiKey
+                }
+            })
+            .then(response => {
+                const results = response.data;
+                displayResults(results);
+            })
+            .catch(error => {
+                console.error('حدث خطأ في الاستدعاء إلى الAPI', error);
+            });
+        });
+
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // مسح أي نتائج سابقة
+
+            if (results.length === 0) {
+                resultsContainer.textContent = 'لم يتم العثور على نتائج.';
+                return;
+            }
+
+            const ul = document.createElement('ul');
+            results.forEach(result => {
+                const li = document.createElement('li');
+                li.textContent = result.name; // تغيير هذا حسب تنسيق بيانات النتائج
+                ul.appendChild(li);
+            });
+            resultsContainer.appendChild(ul);
+        }
+    </script>
+</body>
+</html>
