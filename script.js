@@ -114,6 +114,9 @@ function highlightMatches() {
     let searchTerm = searchInput.value.trim().toLowerCase();
 	
 	searchTerm = searchTerm.replace(/["]/g, '');
+	searchTerm = searchTerm.replace(/[:]/g, ' :');
+	searchTerm = searchTerm.replace(/[()]/g, ' ()');
+	searchTerm = searchTerm.replace(/[-]/g, ' -');
 	//searchTerm = searchTerm.replace(/[و ]/g, '[و و]');//تحتاج اعادة نظر
 	    searchTerm = searchTerm.replace(/[اأإآ]/g, '[اأإآ]'); // استبدال الأحرف الممكنة بأي حرف منها
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
