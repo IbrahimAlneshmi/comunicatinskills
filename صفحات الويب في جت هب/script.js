@@ -119,6 +119,7 @@ function highlightMatches() {
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
 
 searchTerm = searchTerm.replace(/[.]/g, '');
+	searchTerm = searchTerm.replace(/[:]/g, '');
 searchTerm = searchTerm.replace(/[،]/g, ' ');
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
     
