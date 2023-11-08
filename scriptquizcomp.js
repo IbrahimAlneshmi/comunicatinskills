@@ -21,3 +21,12 @@ contentElements.forEach(element => {
     });
 });
 
+
+document.addEventListener('keydown', function (event) {
+    if (event.ctrlKey && (event.key === 'c' || event.key === 'C')) {
+        // إلغاء عملية النسخ
+        event.preventDefault();
+	    alert('نسخ النص غير مسموح به.');        // يمكنك هنا عرض رسالة تنبيه إذا رغبت
+    }
+});
+
