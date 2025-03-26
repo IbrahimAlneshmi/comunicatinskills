@@ -113,7 +113,7 @@ function pasteFromClipboard() {
 function highlightMatches() {
     let searchTerm = searchInput.value.trim().toLowerCase();
 	
-	searchTerm = searchTerm.replace(/["]/g, '');
+	/*searchTerm = searchTerm.replace(/["]/g, '');
 	searchTerm = searchTerm.replace(/[:]/g, '');
 	searchTerm = searchTerm.replace(/[()]/g, '[ ()]');
 	searchTerm = searchTerm.replace(/[-]/g, ' -');
@@ -122,7 +122,7 @@ function highlightMatches() {
 		searchTerm = searchTerm.replace(/[ًٌٍَُِّْ]/g, '');
 
 searchTerm = searchTerm.replace(/[.]/g, '');
-searchTerm = searchTerm.replace(/[،]/g, ' ');
+searchTerm = searchTerm.replace(/[،]/g, ' ');*/
     // حذف المسافات الزائدة بين الكلمات (أكثر من مسافتين)
     
     searchTerm = searchTerm.replace(/[,]/g, ' ');
